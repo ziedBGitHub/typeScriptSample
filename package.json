@@ -1,0 +1,22 @@
+{
+  "name": "typescriptsample",
+  "version": "1.0.0",
+  "description": "training typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziedBGitHub/typeScriptSample.git"
+  },
+  "author": "zied",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ziedBGitHub/typeScriptSample/issues"
+  },
+  "homepage": "https://github.com/ziedBGitHub/typeScriptSample#readme",
+  "dependencies": {
+    "typescript": "^3.0.1"
+  }
+}
