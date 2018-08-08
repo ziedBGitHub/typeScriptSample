@@ -1,4 +1,7 @@
-console.log('Hello Word!');
+/// <reference path="player.ts" />
+/// <reference path="person.ts" />
+/// <reference path="result.ts" />
+
 
 // Testing variable type
 let x: string = "Hello Word";
@@ -41,3 +44,57 @@ submitBtn.addEventListener('click', () => {
     let playerName = getInputValue('playerName');
     getPlayerScore(playerName);
 })
+
+//ARROW FUNCTIONS
+
+// Arrow function with one parameter
+let square = (x: number): void => console.log(x * x);
+square(5);
+
+//Arrow function with 2 parameters
+let addition = (a: number, b: number): void => console.log(a + b);
+addition(2, 3);
+
+//Arrow function without parameters
+let sayHello = (): void => console.log("Hello !");
+sayHello();
+
+//function declaration
+
+let logMessage = (message: string) => console.log(message);
+let logError = (information: string) => console.error(information);
+
+let scores: number[] = [120, 80, 110, 50];
+
+let logger: (message: string) => void;
+scores.forEach(item => {
+    logger = item >= 100 ? logMessage : logError;
+    logger(`the score is: ${item}`);
+});
+
+// CUSTOM TYPES (INTERFACES & CLASSES)
+
+//interfaces (see Person.ts and Result.ts)
+
+// initialization 
+
+let myResult: Result = {
+    score: 10,
+    gameDuration: 60,
+    game: 'my Game' 
+}
+
+let myPlayer: Person = {
+      name: 'zied',
+      experience: () => "2 years"
+}
+
+//class (see Player.ts)
+
+let myPlayer2: Player = new Player();
+myPlayer2.name = "zied";
+myPlayer2.numberGames = 2;
+console.log("name: ", myPlayer2.name);
+console.log("name: ", myPlayer2.experience());
+
+
